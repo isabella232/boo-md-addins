@@ -349,7 +349,7 @@ class BooCompletionTextEditorExtension(CompletionTextEditorExtension,IPathedDocu
 			return
 			
 		location = TextEditor.Caret.Location
-		type = GetTypeAt (unit, location)
+		type = GetTypeAt (unit, location) as TypeDeclaration
 		result = System.Collections.Generic.List of PathEntry()
 		ambience = GetAmbience()
 		member = null as EntityDeclaration
