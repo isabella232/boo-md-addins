@@ -32,3 +32,6 @@ class BooCompilationParameters(ConfigurationParameters):
 		
 	override def RemoveDefineSymbol (symbol as string):
 		_defines.Remove (symbol) if _defines.Contains (symbol)
+		
+	override def HasDefineSymbol (symbol as string):
+		return _defines.Contains (symbol)
